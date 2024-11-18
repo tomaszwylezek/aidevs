@@ -1,0 +1,29 @@
+{
+  "name": "poligon_api",
+  "version": "1.0.0",
+  "license": "MIT",
+  "type": "commonjs",
+  "scripts": {
+    "start:poligon": "ts-node src/task/poligon/main.ts",
+    "start:llama": "ts-node src/task/llama/main.ts",
+    "start:s01e01": "ts-node src/task/s01_e01/main.ts",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "ollama": "^0.5.10",
+    "openai": "^4.28.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.14",
+    "@types/node": "^22.9.0",
+    "axios": "^1.7.7",
+    "cheerio": "^1.0.0",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.2.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3"
+  }
+}
