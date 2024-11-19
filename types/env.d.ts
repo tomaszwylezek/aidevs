@@ -6,6 +6,7 @@ declare global {
       S01E01_BASE_URL: string;
       S01E01_USERNAME: string;
       S01E01_PASSWORD: string;
+      S01E02_VERIFY_URL: string;
       POLIGON_VERIFY_URL: string;
       POLIGON_DATA_URL: string;
     }

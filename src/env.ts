@@ -8,6 +8,9 @@ interface EnvVariables {
     username: string;
     password: string;
   },
+  s01e02: {
+    verifyUrl: string;
+  },
   poligon: {
     verifyUrl: string;
     dataUrl: string;
@@ -24,6 +27,9 @@ export const getEnvVariables = (): EnvVariables => {
       baseUrl: process.env.S01E01_BASE_URL!,
       username: process.env.S01E01_USERNAME!,
       password: process.env.S01E01_PASSWORD!,
+    },
+    s01e02: {
+      verifyUrl: process.env.S01E02_VERIFY_URL!,
     },
     poligon: {
       verifyUrl: process.env.POLIGON_VERIFY_URL!,
