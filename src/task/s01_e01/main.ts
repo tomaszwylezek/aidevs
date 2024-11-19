@@ -1,6 +1,7 @@
 import { QuestionService } from './services/question.service';
-import { OpenAIService } from './services/openai.service';
+import { OpenAIService } from '../../services/openai.service';
 import { SubmitService } from './services/submit.service';
+import { SYSTEM_MESSAGE } from './config/openai.config';
 
 async function main() {
     try {
@@ -12,8 +13,8 @@ async function main() {
         console.log('Retrieved question:', question);
 
         // Get answer from OpenAI
-        const openAIService = new OpenAIService();
-        const { answer, usage } = await openAIService.getAnswer(question);
+        const openAIService = new OpenAIService(SYSTEM_MESSAGE);
+        const { answer, usage } = await openAIService.getResponse(question);
         console.log('OpenAI answer:', answer);
         console.log('Token usage:', {
             prompt_tokens: usage.prompt_tokens,

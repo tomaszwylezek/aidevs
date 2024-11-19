@@ -1,7 +1,6 @@
 import OpenAI from 'openai';
-import { getEnvVariables } from '../../../env';
-import { SYSTEM_MESSAGE } from '../config/openai.config';
-import { TokenUsage } from '../../../types/api.types';
+import { getEnvVariables } from '../env';
+import { TokenUsage } from '../types/api.types';
 
 interface AnswerResponse {
     answer: string;
@@ -11,24 +10,24 @@ interface AnswerResponse {
 export class OpenAIService {
     private openai: OpenAI;
 
-    constructor() {
+    constructor(private systemMessage: string) {
         const env = getEnvVariables();
         this.openai = new OpenAI({
             apiKey: env.openAIApiKey,
         });
     }
 
-    async getAnswer(question: string): Promise<AnswerResponse> {
+    async getResponse(prompt: string): Promise<AnswerResponse> {
         try {
             const completion = await this.openai.chat.completions.create({
                 messages: [
                     {
                         role: "system",
-                        content: SYSTEM_MESSAGE
+                        content: this.systemMessage
                     },
                     {
                         role: "user",
-                        content: question
+                        content: prompt
                     }
                 ],
                 model: "gpt-4o-mini",
