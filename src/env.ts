@@ -14,7 +14,11 @@ interface EnvVariables {
   poligon: {
     verifyUrl: string;
     dataUrl: string;
-  }
+  },
+  s01e03: {
+    verifyUrl: string;
+    dataUrl: string;
+  },
 }
 
 dotenv.config();
@@ -34,6 +38,10 @@ export const getEnvVariables = (): EnvVariables => {
     poligon: {
       verifyUrl: process.env.POLIGON_VERIFY_URL!,
       dataUrl: process.env.POLIGON_DATA_URL!,
-    }
+    },
+    s01e03: {
+      verifyUrl: process.env.S01E03_VERIFY_URL!,
+      dataUrl: process.env.S01E03_DATA_URL!,
+    },
   };
 };

@@ -9,6 +9,7 @@
     "start:llama": "ts-node src/task/llama/main.ts",
     "start:s01e01": "ts-node src/task/s01_e01/main.ts",
     "start:s01e02": "ts-node src/task/s01_e02/main.ts",
+    "start:s01e03": "ts-node src/task/s01_e03/main.ts",
     "##Other##": "----------------------------------------",
     "test": "jest",
     "test:watch": "jest --watch",

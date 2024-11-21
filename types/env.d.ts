@@ -9,6 +9,8 @@ declare global {
       S01E02_VERIFY_URL: string;
       POLIGON_VERIFY_URL: string;
       POLIGON_DATA_URL: string;
+      S01E03_VERIFY_URL: string;
+      S01E03_DATA_URL: string;
     }
   }
 }
